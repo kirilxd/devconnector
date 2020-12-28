@@ -1,0 +1,541 @@
+Statistical profiling result from isolate-0x1046ae000-95588-v8.log, (665 ticks, 3 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     16    2.4%          /usr/lib/system/libsystem_malloc.dylib
+      9    1.4%          /usr/lib/system/libsystem_pthread.dylib
+      9    1.4%          /usr/lib/libc++.1.dylib
+      6    0.9%          /usr/lib/system/libsystem_platform.dylib
+      6    0.9%          /usr/lib/system/libsystem_kernel.dylib
+      4    0.6%          /usr/lib/system/libsystem_c.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      4    0.6%    0.7%  LazyCompile: *resolve path.js:973:10
+      1    0.2%    0.2%  RegExp: \.\d+
+      1    0.2%    0.2%  LazyCompile: *realpathSync fs.js:1650:22
+      1    0.2%    0.2%  LazyCompile: *readPackageScope internal/modules/cjs/loader.js:271:26
+
+ [C++]:
+   ticks  total  nonlib   name
+    261   39.2%   42.4%  t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     92   13.8%   15.0%  T __kernelrpc_thread_policy_set
+     79   11.9%   12.8%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     40    6.0%    6.5%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     25    3.8%    4.1%  T _semaphore_create
+     10    1.5%    1.6%  t __ZN4node2fsL4OpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      7    1.1%    1.1%  T ___workq_kernreturn
+      7    1.1%    1.1%  T __ZN4node6crypto13SecureContext12AddRootCertsERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      6    0.9%    1.0%  t __ZN2v88internal12StringHasher20HashSequentialStringIhEEjPKT_iy
+      5    0.8%    0.8%  t __ZN4node6Buffer12_GLOBAL__N_111StringSliceILNS_8encodingE1EEEvRKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      5    0.8%    0.8%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      4    0.6%    0.7%  T __ZN4node6crypto6PBKDF2ERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.5%    0.5%  t __ZNSt3__116__pad_and_outputIcNS_11char_traitsIcEEEENS_19ostreambuf_iteratorIT_T0_EES6_PKS4_S8_S8_RNS_8ios_baseES4_
+      3    0.5%    0.5%  t __ZN4node2fsL18InternalModuleStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.5%    0.5%  T ___commpage_gettimeofday
+      3    0.5%    0.5%  T __ZN4node7TTYWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.5%    0.5%  T __ZN4node6crypto7SSLWrapINS_7TLSWrapEE18GetPeerCertificateERKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      2    0.3%    0.3%  t __ZN4nodeL9EnvGetterEN2v85LocalINS0_4NameEEERKNS0_20PropertyCallbackInfoINS0_5ValueEEE
+      2    0.3%    0.3%  t __ZN4node2fsL5LStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.3%    0.3%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.3%    0.3%  t __ZN4node15AllocatedBufferC2EPNS_11EnvironmentE8uv_buf_t
+      2    0.3%    0.3%  T _mach_vm_copy
+      2    0.3%    0.3%  T __ZN4node7binding18GetInternalBindingERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.3%    0.3%  T __ZN4node2fs5CloseERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.3%    0.3%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_6WritevERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+      2    0.3%    0.3%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteBufferERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+      1    0.2%    0.2%  t __ZNSt3__124__put_character_sequenceIcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_PKS4_m
+      1    0.2%    0.2%  t __ZN4node4utilL14SetHiddenValueERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.2%    0.2%  t __ZN4node4i18nL7ToASCIIERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.2%    0.2%  t __ZN4node2fsL5FStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.2%    0.2%  t __ZN4node10cares_wrap12_GLOBAL__N_15QueryINS1_12QuerySrvWrapEEEvRKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      1    0.2%    0.2%  t __ZN4node10cares_wrap12_GLOBAL__N_116AfterGetAddrInfoEP16uv_getaddrinfo_siP8addrinfo
+      1    0.2%    0.2%  t __ZN4node10cares_wrap12_GLOBAL__N_111GetAddrInfoERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.2%    0.2%  t __ZN2v88internal17PrototypeIterator7AdvanceEv
+      1    0.2%    0.2%  t __ZN2v88internal12_GLOBAL__N_155IterativelyExecuteAndFinalizeUnoptimizedCompilationJobsEPNS0_7IsolateENS0_6HandleINS0_18SharedFunctionInfoEEENS4_INS0_6ScriptEEEPNS0_9ParseInfoEPNS0_19AccountingAllocatorEPNS0_15IsCompiledScopeEPNSt3__16vectorINS0_34FinalizeUnoptimizedCompilationDataENSF_9allocatorISH_EEEE
+      1    0.2%    0.2%  t __ZN2v88internal12_GLOBAL__N_130FinalizeUnoptimizedCompilationEPNS0_7IsolateENS0_6HandleINS0_6ScriptEEERKNS0_23UnoptimizedCompileFlagsEPKNS0_23UnoptimizedCompileStateERKNSt3__16vectorINS0_34FinalizeUnoptimizedCompilationDataENSD_9allocatorISF_EEEE
+      1    0.2%    0.2%  t __ZN2v88internal11StringShape33DispatchToSpecificTypeWithoutCastIZNS1_22DispatchToSpecificTypeIZNS0_6String3GetEiE19StringGetDispatchertJRiEEET0_S4_DpOT1_E17CastingDispatchertJRS4_S6_EEES7_SA_
+      1    0.2%    0.2%  t __ZN2v84base19TemplateHashMapImplIPvS2_NS0_26HashEqualityThenKeyMatcherIS2_PFbS2_S2_EEENS0_23DefaultAllocationPolicyEE6ResizeES7_
+      1    0.2%    0.2%  T _fcntl
+      1    0.2%    0.2%  T __kernelrpc_mach_vm_protect_trap
+      1    0.2%    0.2%  T __ZN4node7TLSWrap8ClearOutEv
+      1    0.2%    0.2%  T __ZN4node7TLSWrap5StartERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.2%    0.2%  T __ZN4node20InternalMakeCallbackEPNS_11EnvironmentEN2v85LocalINS2_6ObjectEEES5_NS3_INS2_8FunctionEEEiPNS3_INS2_5ValueEEENS_13async_contextE
+      1    0.2%    0.2%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+      1    0.2%    0.2%  T __ZN2v88internal9Accessors25ReconfigureToDataPropertyENS_5LocalINS_4NameEEENS2_INS_5ValueEEERKNS_20PropertyCallbackInfoINS_7BooleanEEE
+      1    0.2%    0.2%  T __ZN2v88internal8Compiler7CompileENS0_6HandleINS0_18SharedFunctionInfoEEENS1_18ClearExceptionFlagEPNS0_15IsCompiledScopeE
+      1    0.2%    0.2%  T __ZN2v88internal8Compiler7CompileENS0_6HandleINS0_10JSFunctionEEENS1_18ClearExceptionFlagEPNS0_15IsCompiledScopeE
+      1    0.2%    0.2%  T __ZN2v88internal8Builtins14builtin_handleEi
+      1    0.2%    0.2%  T __ZN2v88internal5ScopeC2EPNS0_4ZoneENS0_9ScopeTypeENS0_6HandleINS0_9ScopeInfoEEE
+      1    0.2%    0.2%  T __ZN2v88internal33Builtin_TypedArrayPrototypeBufferEiPmPNS0_7IsolateE
+      1    0.2%    0.2%  T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      1    0.2%    0.2%  T __ZN2v88internal20Builtin_ArrayUnshiftEiPmPNS0_7IsolateE
+      1    0.2%    0.2%  T __ZN2v88internal13AssemblerBaseD2Ev
+      1    0.2%    0.2%  T __ZN2v88internal12ArrayLiteral17InitDepthAndFlagsEv
+      1    0.2%    0.2%  T __ZN2v86Object3NewEPNS_7IsolateE
+      1    0.2%    0.2%  T __ZN2v82V818GlobalizeReferenceEPNS_8internal7IsolateEPm
+      1    0.2%    0.2%  T __ZN2v811HandleScopeC1EPNS_7IsolateE
+
+ [Summary]:
+   ticks  total  nonlib   name
+      7    1.1%    1.1%  JavaScript
+    605   91.0%   98.4%  C++
+     37    5.6%    6.0%  GC
+     50    7.5%          Shared libraries
+      3    0.5%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    288   59.0%   43.3%  t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+    180   36.9%   27.1%  T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      5    1.0%    0.8%  T __ZN2v88internal17Builtin_JsonParseEiPmPNS0_7IsolateE
+      2    0.4%    0.3%  T _mach_vm_copy
+      2    0.4%    0.3%  T __ZN2v88internal28Builtin_ObjectDefinePropertyEiPmPNS0_7IsolateE
+      2    0.4%    0.3%  T __ZN2v88internal27Builtin_FunctionConstructorEiPmPNS0_7IsolateE
+      2    0.4%    0.3%  T __ZN2v88internal24Builtin_ErrorConstructorEiPmPNS0_7IsolateE
+      1    0.2%    0.2%  T _fcntl
+      1    0.2%    0.2%  T __ZN4node7TLSWrap5StartERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.2%    0.2%  T __ZN2v88internal34Builtin_StringPrototypeLastIndexOfEiPmPNS0_7IsolateE
+      1    0.2%    0.2%  T __ZN2v88internal33Builtin_TypedArrayPrototypeBufferEiPmPNS0_7IsolateE
+      1    0.2%    0.2%  T __ZN2v88internal22Builtin_ReflectOwnKeysEiPmPNS0_7IsolateE
+      1    0.2%    0.2%  T __ZN2v88internal20Builtin_ArrayUnshiftEiPmPNS0_7IsolateE
+      1    0.2%    0.2%  T __ZN2v811HandleScopeC1EPNS_7IsolateE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    261   39.2%  t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+    111   42.5%    t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     12   10.8%      t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1    8.3%        LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:964:18
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1    8.3%        LazyCompile: ~use /Users/kirill/Documents/projects/devconnector/node_modules/express/lib/application.js:187:23
+      1  100.0%          Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/server.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1    8.3%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:240:21
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:271:26
+      1  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:391:17
+      1    8.3%        LazyCompile: ~isIPv6 internal/net.js:34:16
+      1  100.0%          LazyCompile: ~isIP internal/net.js:38:14
+      1  100.0%            LazyCompile: ~lookupAndConnect net.js:982:26
+      1    8.3%        LazyCompile: ~escapeHtml /Users/kirill/Documents/projects/devconnector/node_modules/escape-html/index.js:33:20
+      1  100.0%          LazyCompile: ~createHtmlDocument /Users/kirill/Documents/projects/devconnector/node_modules/finalhandler/index.js:43:29
+      1  100.0%            LazyCompile: ~write /Users/kirill/Documents/projects/devconnector/node_modules/finalhandler/index.js:273:18
+      1    8.3%        LazyCompile: ~createClientErrorConstructor /Users/kirill/Documents/projects/devconnector/node_modules/http-errors/index.js:132:39
+      1  100.0%          LazyCompile: ~forEachCode /Users/kirill/Documents/projects/devconnector/node_modules/http-errors/index.js:243:38
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1    8.3%        LazyCompile: ~compareIdentifiers /Users/kirill/Documents/projects/devconnector/node_modules/semver/semver.js:576:29
+      1  100.0%          LazyCompile: ~SemVer.compareMain /Users/kirill/Documents/projects/devconnector/node_modules/semver/semver.js:385:41
+      1  100.0%            LazyCompile: ~SemVer.compare /Users/kirill/Documents/projects/devconnector/node_modules/semver/semver.js:376:37
+      1    8.3%        LazyCompile: ~Server.connect /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/server.js:467:36
+      1  100.0%          LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/replset.js:855:24
+      1  100.0%            LazyCompile: ~listOnTimeout internal/timers.js:502:25
+      1    8.3%        LazyCompile: ~Comparator.parse /Users/kirill/Documents/projects/devconnector/node_modules/semver/semver.js:749:39
+      1  100.0%          LazyCompile: ~Comparator /Users/kirill/Documents/projects/devconnector/node_modules/semver/semver.js:714:21
+      1  100.0%            LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/semver/semver.js:924:26
+      1    8.3%        LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/uri_parser.js:87:35
+      1  100.0%          LazyCompile: ~onresolve dns.js:198:19
+      1    8.3%        LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connect.js:87:41
+      1  100.0%          LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/auth/scram.js:30:28
+      1  100.0%            LazyCompile: ~wrap.ondone internal/crypto/random.js:62:17
+      1    8.3%        Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/qs/lib/utils.js:6:26
+      1  100.0%          Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/qs/lib/utils.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      5    4.5%      LazyCompile: ~realpathSync fs.js:1650:22
+      5  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:343:20
+      4   80.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:334:17
+      3   75.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:350:23
+      1   25.0%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:288:20
+      1   20.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1  100.0%            LazyCompile: ~resolveMainPath internal/modules/run_main.js:8:25
+      5    4.5%      LazyCompile: ~deserialize /Users/kirill/Documents/projects/devconnector/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      5  100.0%        LazyCompile: ~BSON.deserialize /Users/kirill/Documents/projects/devconnector/node_modules/bson/lib/bson/bson.js:134:38
+      5  100.0%          LazyCompile: ~parse /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/msg.js:171:8
+      5  100.0%            LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/pool.js:362:18
+      4    3.6%      LazyCompile: ~toRealPath internal/modules/cjs/loader.js:343:20
+      4  100.0%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:334:17
+      3   75.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:350:23
+      3  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1   25.0%          LazyCompile: ~tryPackage internal/modules/cjs/loader.js:288:20
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      3    2.7%      LazyCompile: ~module.exports /Users/kirill/Documents/projects/devconnector/node_modules/bluebird/js/release/promise.js:2:26
+      3  100.0%        Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/bluebird/js/release/bluebird.js:1:1
+      3  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      3  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      3    2.7%      LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      3  100.0%        LazyCompile: ~Module.require internal/modules/cjs/loader.js:944:36
+      3  100.0%          LazyCompile: ~require internal/modules/cjs/helpers.js:87:31
+      2   66.7%            Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/validator/index.js:1:1
+      1   33.3%            Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/operations/connect.js:1:1
+      2    1.8%      LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+      1   50.0%        LazyCompile: ~runNextTicks internal/process/task_queues.js:56:22
+      1  100.0%          LazyCompile: ~listOnTimeout internal/timers.js:502:25
+      1  100.0%            LazyCompile: ~processTimers internal/timers.js:482:25
+      2    1.8%      LazyCompile: ~emit events.js:264:44
+      1   50.0%        LazyCompile: ~processMessage /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connection.js:447:24
+      1  100.0%          LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connection.js:508:18
+      1  100.0%            LazyCompile: ~emit events.js:264:44
+      1   50.0%        LazyCompile: ~TLSSocket._finishInit _tls_wrap.js:906:43
+      1  100.0%          LazyCompile: ~ssl.onhandshakedone _tls_wrap.js:704:27
+      2    1.8%      LazyCompile: *hidden internal/errors.js:286:25
+      1   50.0%        LazyCompile: ~setHeader _http_outgoing.js:556:57
+      1  100.0%          LazyCompile: ~expressInit /Users/kirill/Documents/projects/devconnector/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%            LazyCompile: ~handle /Users/kirill/Documents/projects/devconnector/node_modules/express/lib/router/layer.js:86:49
+      1   50.0%        LazyCompile: ~check internal/crypto/pbkdf2.js:54:15
+      1  100.0%          LazyCompile: ~pbkdf2Sync internal/crypto/pbkdf2.js:44:20
+      1  100.0%            LazyCompile: ~HI /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/auth/scram.js:284:12
+      6    2.3%    LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      6  100.0%      LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      6  100.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      6  100.0%          LazyCompile: ~Module.require internal/modules/cjs/loader.js:944:36
+      6  100.0%            LazyCompile: ~require internal/modules/cjs/helpers.js:87:31
+      5    1.9%    T __ZN2v88internal17Builtin_JsonParseEiPmPNS0_7IsolateE
+      3   60.0%      LazyCompile: ~readPackage internal/modules/cjs/loader.js:240:21
+      3  100.0%        LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+      3  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      3  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      2   40.0%      LazyCompile: ~Module._extensions..json internal/modules/cjs/loader.js:1097:39
+      2  100.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      2  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      2  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:944:36
+      5    1.9%    LazyCompile: ~readFileSync fs.js:374:22
+      5  100.0%      LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      5  100.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      5  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      5  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:944:36
+      5    1.9%    LazyCompile: ~deserializeObject /Users/kirill/Documents/projects/devconnector/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      4   80.0%      LazyCompile: ~deserialize /Users/kirill/Documents/projects/devconnector/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      4  100.0%        LazyCompile: ~BSON.deserialize /Users/kirill/Documents/projects/devconnector/node_modules/bson/lib/bson/bson.js:134:38
+      3   75.0%          LazyCompile: ~parse /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/msg.js:171:8
+      3  100.0%            LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/pool.js:362:18
+      1   25.0%          LazyCompile: ~Response.parse /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/commands.js:438:36
+      1  100.0%            LazyCompile: ~messageHandler /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connection.js:346:28
+      1   20.0%      LazyCompile: ~deserializeObject /Users/kirill/Documents/projects/devconnector/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      1  100.0%        LazyCompile: ~deserializeObject /Users/kirill/Documents/projects/devconnector/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      1  100.0%          LazyCompile: ~deserialize /Users/kirill/Documents/projects/devconnector/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      1  100.0%            LazyCompile: ~BSON.deserialize /Users/kirill/Documents/projects/devconnector/node_modules/bson/lib/bson/bson.js:134:38
+      4    1.5%    LazyCompile: ~readPackage internal/modules/cjs/loader.js:240:21
+      3   75.0%      LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:271:26
+      2   66.7%        LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      2  100.0%          LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      2  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      1   33.3%        LazyCompile: ~trySelf internal/modules/cjs/loader.js:391:17
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      1  100.0%            LazyCompile: ~module.exports /Users/kirill/Documents/projects/devconnector/node_modules/resolve-from/index.js:5:27
+      1   25.0%      LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+      1  100.0%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      3    1.1%    LazyCompile: ~toRealPath internal/modules/cjs/loader.js:343:20
+      3  100.0%      LazyCompile: ~tryFile internal/modules/cjs/loader.js:334:17
+      2   66.7%        LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:350:23
+      2  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      2  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      1   33.3%        LazyCompile: ~tryPackage internal/modules/cjs/loader.js:288:20
+      1  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      3    1.1%    LazyCompile: ~resolve path.js:973:10
+      2   66.7%      LazyCompile: ~readPackage internal/modules/cjs/loader.js:240:21
+      1   50.0%        LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+      1  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      1   50.0%        LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:271:26
+      1  100.0%          LazyCompile: ~trySelf internal/modules/cjs/loader.js:391:17
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      1   33.3%      LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:944:36
+      3    1.1%    LazyCompile: ~remove internal/linkedlist.js:15:16
+      2   66.7%      LazyCompile: ~append internal/linkedlist.js:29:16
+      2  100.0%        LazyCompile: ~insert internal/timers.js:345:16
+      1   50.0%          LazyCompile: ~setUnrefTimeout internal/timers.js:367:25
+      1  100.0%            LazyCompile: ~setStreamTimeout internal/stream_base_commons.js:243:26
+      1   50.0%          LazyCompile: ~insertGuarded internal/timers.js:320:23
+      1  100.0%            LazyCompile: ~unrefActive internal/timers.js:312:21
+      1   33.3%      LazyCompile: ~listOnTimeout internal/timers.js:502:25
+      1  100.0%        LazyCompile: ~processTimers internal/timers.js:482:25
+      3    1.1%    LazyCompile: ~Module.require internal/modules/cjs/loader.js:944:36
+      3  100.0%      LazyCompile: ~require internal/modules/cjs/helpers.js:87:31
+      1   33.3%        Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/auth/plain.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1   33.3%        Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/collection.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1   33.3%        Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/express/lib/view.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      3    1.1%    LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      3  100.0%      LazyCompile: ~Module.require internal/modules/cjs/loader.js:944:36
+      3  100.0%        LazyCompile: ~require internal/modules/cjs/helpers.js:87:31
+      1   33.3%          Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/validator/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1   33.3%          Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/helpers/model/castBulkWrite.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1   33.3%          Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/operations/cursor_ops.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+
+     92   13.8%  T __kernelrpc_thread_policy_set
+
+     79   11.9%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     79  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     79  100.0%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:964:18
+     79  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+     79  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+     79  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+
+     40    6.0%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     40  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     40  100.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+     37   92.5%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      4   10.8%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      3    8.1%          Eval: ~<anonymous> stream.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      3    8.1%          Eval: ~<anonymous> http.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      2    5.4%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      2    5.4%          Eval: ~<anonymous> internal/process/esm_loader.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      2    5.4%          Eval: ~<anonymous> events.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:252:32
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.7%          LazyCompile: ~setupBuffer internal/bootstrap/node.js:300:21
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.7%          LazyCompile: ~initializeCJSLoader internal/bootstrap/pre_execution.js:407:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:19:36
+      1    2.7%          LazyCompile: ~get dns.js:324:8
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1    2.7%          Eval: ~<anonymous> tty.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> tls.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> net.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> module.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> internal/modules/esm/loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> internal/modules/cjs/helpers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    2.7%          Eval: ~<anonymous> internal/crypto/keygen.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> internal/crypto/cipher.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> internal/console/global.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> internal/cluster/master.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> internal/child_process.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> internal/bootstrap/switches/is_main_thread.js:1:1
+      1    2.7%          Eval: ~<anonymous> dns.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.7%          Eval: ~<anonymous> assert.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      3    7.5%        LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:219:25
+      3  100.0%          LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:31:26
+      3  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+
+     25    3.8%  T _semaphore_create
+     16   64.0%    t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      3   18.8%      t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1   33.3%        LazyCompile: ~encodeUrl /Users/kirill/Documents/projects/devconnector/node_modules/encodeurl/index.js:56:20
+      1  100.0%          LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/finalhandler/index.js:86:19
+      1  100.0%            LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/express/lib/router/index.js:629:19
+      1   33.3%        LazyCompile: ~Range.parseRange /Users/kirill/Documents/projects/devconnector/node_modules/semver/semver.js:891:39
+      1  100.0%          LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/semver/semver.js:866:53
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1   33.3%        LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongoose-legacy-pluralize/index.js:87:34
+      1  100.0%          t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%            LazyCompile: ~pluralize /Users/kirill/Documents/projects/devconnector/node_modules/mongoose-legacy-pluralize/index.js:83:19
+      1    6.3%      T __ZN4node7TLSWrap5StartERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1  100.0%        LazyCompile: ~TLSSocket._start _tls_wrap.js:935:38
+      1  100.0%          LazyCompile: ~onceWrapper events.js:416:21
+      1  100.0%            LazyCompile: ~emit events.js:264:44
+      1    6.3%      LazyCompile: ~topologyMonitor /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/replset.js:599:25
+      1  100.0%        LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/replset.js:734:18
+      1  100.0%          LazyCompile: ~onceWrapper events.js:416:21
+      1  100.0%            LazyCompile: ~emit events.js:264:44
+      1    6.3%      LazyCompile: ~readFileSync fs.js:374:22
+      1  100.0%        LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1  100.0%          LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      1    6.3%      LazyCompile: ~parsersCb _http_common.js:168:65
+      1  100.0%        LazyCompile: ~alloc internal/freelist.js:15:8
+      1  100.0%          LazyCompile: ~connectionListenerInternal _http_server.js:418:36
+      1  100.0%            LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      1    6.3%      LazyCompile: ~checkServerIdentity tls.js:221:59
+      1  100.0%        LazyCompile: ~onConnectSecure _tls_wrap.js:1483:25
+      1  100.0%          LazyCompile: ~emit events.js:264:44
+      1  100.0%            LazyCompile: ~TLSSocket._finishInit _tls_wrap.js:906:43
+      1    6.3%      LazyCompile: ~_callback /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connection.js:327:23
+      1  100.0%        LazyCompile: ~messageHandler /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connection.js:346:28
+      1  100.0%          LazyCompile: ~emit events.js:264:44
+      1  100.0%            LazyCompile: ~processMessage /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connection.js:447:24
+      1    6.3%      LazyCompile: ~Socket._writeGeneric net.js:759:42
+      1  100.0%        LazyCompile: ~Socket._writev net.js:791:36
+      1  100.0%          LazyCompile: ~doWrite internal/streams/writable.js:367:17
+      1  100.0%            LazyCompile: ~clearBuffer internal/streams/writable.js:493:21
+      1    6.3%      LazyCompile: ~SchemaType /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/schematype.js:40:20
+      1  100.0%        LazyCompile: ~ObjectId /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/schema/objectid.js:27:18
+      1  100.0%          LazyCompile: ~Schema.interpretAsType /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/schema.js:870:44
+      1  100.0%            LazyCompile: ~Schema.path /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/schema.js:612:33
+      1    6.3%      LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%        LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1  100.0%          LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      1    6.3%      LazyCompile: ~HMAC /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/auth/scram.js:265:14
+      1  100.0%        LazyCompile: ~continueScramConversation /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/auth/scram.js:115:35
+      1  100.0%          LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/auth/scram.js:105:50
+      1  100.0%            LazyCompile: ~_callback /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connection.js:327:23
+      1    6.3%      LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/semver/semver.js:1083:41
+      1  100.0%        t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%          LazyCompile: ~replaceXRanges /Users/kirill/Documents/projects/devconnector/node_modules/semver/semver.js:1081:25
+      1  100.0%            LazyCompile: ~parseComparator /Users/kirill/Documents/projects/devconnector/node_modules/semver/semver.js:960:26
+      1    6.3%      LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/express/lib/router/index.js:629:19
+      1  100.0%        LazyCompile: ~next /Users/kirill/Documents/projects/devconnector/node_modules/express/lib/router/index.js:176:16
+      1  100.0%          LazyCompile: ~initialize /Users/kirill/Documents/projects/devconnector/node_modules/passport/lib/middleware/initialize.js:44:29
+      1  100.0%            LazyCompile: ~handle /Users/kirill/Documents/projects/devconnector/node_modules/express/lib/router/layer.js:86:49
+      1    6.3%      LazyCompile: *hidden internal/errors.js:286:25
+      1  100.0%        LazyCompile: ~setHeader _http_outgoing.js:556:57
+      1  100.0%          LazyCompile: ~expressInit /Users/kirill/Documents/projects/devconnector/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%            LazyCompile: ~handle /Users/kirill/Documents/projects/devconnector/node_modules/express/lib/router/layer.js:86:49
+
+     16    2.4%  /usr/lib/system/libsystem_malloc.dylib
+     10   62.5%    t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1   10.0%      t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%        LazyCompile: ~realpathSync fs.js:1650:22
+      1  100.0%          LazyCompile: ~toRealPath internal/modules/cjs/loader.js:343:20
+      1  100.0%            LazyCompile: ~tryFile internal/modules/cjs/loader.js:334:17
+      1   10.0%      LazyCompile: ~toRealPath internal/modules/cjs/loader.js:343:20
+      1  100.0%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:334:17
+      1  100.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:350:23
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1   10.0%      LazyCompile: ~setupListenHandle net.js:1271:27
+      1  100.0%        LazyCompile: ~listenInCluster net.js:1356:25
+      1  100.0%          LazyCompile: ~Server.listen net.js:1398:35
+      1  100.0%            LazyCompile: ~listen /Users/kirill/Documents/projects/devconnector/node_modules/express/lib/application.js:616:29
+      1   10.0%      LazyCompile: ~onceWrapper events.js:416:21
+      1  100.0%        LazyCompile: ~emit events.js:264:44
+      1  100.0%          LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/server.js:313:18
+      1  100.0%            LazyCompile: ~emit events.js:264:44
+      1   10.0%      LazyCompile: ~createDebug /Users/kirill/Documents/projects/devconnector/node_modules/mquery/node_modules/debug/src/debug.js:62:21
+      1  100.0%        Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mquery/lib/mquery.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1   10.0%      LazyCompile: ~connect _tls_wrap.js:1556:35
+      1  100.0%        LazyCompile: ~makeConnection /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connect.js:254:24
+      1  100.0%          LazyCompile: ~connect /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connect.js:18:17
+      1  100.0%            LazyCompile: ~createConnection /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/pool.js:974:26
+      1   10.0%      LazyCompile: ~Server.connect /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/server.js:467:36
+      1  100.0%        LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/replset.js:855:24
+      1  100.0%          LazyCompile: ~listOnTimeout internal/timers.js:502:25
+      1  100.0%            LazyCompile: ~processTimers internal/timers.js:482:25
+      1   10.0%      LazyCompile: ~Mongoose.model /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/index.js:475:36
+      1  100.0%        Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/models/User.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1   10.0%      LazyCompile: *stat internal/modules/cjs/loader.js:132:14
+      1  100.0%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:334:17
+      1  100.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:350:23
+      1  100.0%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:288:20
+      1   10.0%      Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/supports-color/index.js:17:30
+      1  100.0%        Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/supports-color/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1    6.3%    T __ZN2v88internal27Builtin_FunctionConstructorEiPmPNS0_7IsolateE
+      1  100.0%      LazyCompile: ~thenCallback /Users/kirill/Documents/projects/devconnector/node_modules/bluebird/js/release/join.js:13:32
+      1  100.0%        LazyCompile: ~module.exports /Users/kirill/Documents/projects/devconnector/node_modules/bluebird/js/release/join.js:3:9
+      1  100.0%          LazyCompile: ~module.exports /Users/kirill/Documents/projects/devconnector/node_modules/bluebird/js/release/promise.js:2:26
+      1  100.0%            Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/bluebird/js/release/bluebird.js:1:1
+
+     10    1.5%  t __ZN4node2fsL4OpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     10  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     10  100.0%      LazyCompile: ~openSync fs.js:467:18
+     10  100.0%        LazyCompile: ~readFileSync fs.js:374:22
+      9   90.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      9  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      1   10.0%          LazyCompile: ~Module._extensions..json internal/modules/cjs/loader.js:1097:39
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+
+      9    1.4%  /usr/lib/system/libsystem_pthread.dylib
+      5   55.6%    t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1   20.0%      t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%        LazyCompile: ~messageHandler /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connection.js:346:28
+      1  100.0%          LazyCompile: ~emit events.js:264:44
+      1  100.0%            LazyCompile: ~processMessage /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connection.js:447:24
+      1   20.0%      LazyCompile: ~onParserExecute _http_server.js:601:25
+      1   20.0%      LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:219:25
+      1  100.0%        LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:31:26
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:944:36
+      1   20.0%      LazyCompile: ~<anonymous> internal/bootstrap/loaders.js:170:34
+      1  100.0%        t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%          LazyCompile: ~<anonymous> internal/per_context/primordials.js:23:10
+      1  100.0%            Eval: ~<static_fields_initializer> internal/bootstrap/loaders.js:169:3
+      1   20.0%      Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/validator/lib/isISIN.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+
+      9    1.4%  /usr/lib/libc++.1.dylib
+      8   88.9%    t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1   12.5%      t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%        LazyCompile: ~Kareem.filter /Users/kirill/Documents/projects/devconnector/node_modules/kareem/index.js:324:35
+      1  100.0%          LazyCompile: ~applyQueryMiddleware /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/helpers/query/applyQueryMiddleware.js:41:30
+      1  100.0%            LazyCompile: ~compile /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/model.js:4667:33
+      1   12.5%      LazyCompile: ~unenroll timers.js:76:18
+      1  100.0%        LazyCompile: ~clearTimeout timers.js:171:22
+      1  100.0%          LazyCompile: ~func /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/shared.js:216:14
+      1  100.0%            LazyCompile: ~listOnTimeout internal/timers.js:502:25
+      1   12.5%      LazyCompile: ~module.exports /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/plugins/saveSubdocs.js:9:26
+      1  100.0%        LazyCompile: ~Schema.plugin /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/schema.js:1407:35
+      1  100.0%          LazyCompile: ~applyPlugins /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/helpers/schema/applyPlugins.js:3:39
+      1  100.0%            LazyCompile: ~Mongoose._applyPlugins /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/index.js:648:44
+      1   12.5%      LazyCompile: ~module.exports /Users/kirill/Documents/projects/devconnector/node_modules/bluebird/js/release/promise.js:2:26
+      1  100.0%        Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/bluebird/js/release/bluebird.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1   12.5%      LazyCompile: ~immediate /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/helpers/immediate.js:10:36
+      1  100.0%        LazyCompile: ~_ensureIndexes /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/model.js:1572:24
+      1  100.0%          LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/model.js:1534:52
+      1  100.0%            LazyCompile: ~promiseOrCallback /Users/kirill/Documents/projects/devconnector/node_modules/mongoose/lib/helpers/promiseOrCallback.js:7:44
+      1   12.5%      LazyCompile: ~_command /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/wireprotocol/command.js:41:18
+      1  100.0%        LazyCompile: ~command /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/wireprotocol/command.js:19:17
+      1  100.0%          LazyCompile: ~Server.command /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/server.js:598:36
+      1  100.0%            LazyCompile: ~pingServer /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/replset.js:401:26
+      1   12.5%      LazyCompile: ~Server.command /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/server.js:598:36
+      1  100.0%        LazyCompile: ~pingServer /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/replset.js:401:26
+      1  100.0%          LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/replset.js:507:41
+      1  100.0%            LazyCompile: ~listOnTimeout internal/timers.js:502:25
+      1   12.5%      LazyCompile: ~Server /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/topologies/server.js:109:14
+      1  100.0%        LazyCompile: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/operations/connect.js:799:30
+      1  100.0%          t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%            LazyCompile: ~translateOptions /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/operations/connect.js:772:26
+
+      7    1.1%  T ___workq_kernreturn
+      1   14.3%    t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%      Eval: ~<anonymous> /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/topologies/read_preference.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+
+      7    1.1%  T __ZN4node6crypto13SecureContext12AddRootCertsERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      7  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      7  100.0%      LazyCompile: ~createSecureContext _tls_common.js:94:59
+      7  100.0%        LazyCompile: ~connect _tls_wrap.js:1556:35
+      7  100.0%          LazyCompile: ~makeConnection /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connect.js:254:24
+      7  100.0%            LazyCompile: ~connect /Users/kirill/Documents/projects/devconnector/node_modules/mongodb/lib/core/connection/connect.js:18:17
+
