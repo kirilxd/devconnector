@@ -8,13 +8,17 @@ const postData = { text: 'adadadadda', name: 'Kiril', avatar: 'dadadada', date: 
 const profileData = { handle: 'dadad', company: 'Apple', website: 'kpi.ua', location: 'Kyiv', status: 'online', skills: ['smart', 'responsible'], bio: 'dadada'}
 
 beforeAll(async () => {
-    await mongoose.connect(MONGO_URI, { useNewUrlParser: true, useCreateIndex: true }, (err) => {
+    await mongoose.connect(MONGO_URI, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err) => {
         if (err) {
             console.error(err);
             process.exit(1);
         }
     });
 });
+
+afterAll(async ()=>{
+    await mongoose.connection.close();
+})
 
 describe('User Model Test', () => {
 
