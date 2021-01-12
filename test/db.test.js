@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const UserModel = require('../models/User');
 const PostModel = require('../models/Post');
 const ProfileModel = require('../models/Profile');
+
 const MONGO_URI = require('../config/keys_dev').mongoURI;
 const userData = { name: 'Kiril', email: 'hellowrld@gmail.com', password: 'qwerty', avatar: 'dasdasda', date: new Date() };
 const postData = { text: 'adadadadda', name: 'Kiril', avatar: 'dadadada', date: new Date() };
