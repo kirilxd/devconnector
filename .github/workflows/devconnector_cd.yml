@@ -18,14 +18,9 @@ jobs:
                   node-version: 12.x
             - name: Intall dependecies
               run: npm ci
-            - uses: expo/expo-github-action@v5
-              with:
-                  expo-version: 3.x
-                  expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
-                  expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
             - name: Run tests
               run: npm test
+            - name: Check formatting
+              run: npm run check-format
             - name: Check with linter
               run: npm run linter
-            - name: Publish on expo
-              run: expo publish
